@@ -1,9 +1,6 @@
-Galaxy Artifacts
-Sprint 1
-
 ## Introduction
 
-Galaxy Artifacts is an opensource and freeware [4x game][http://en.wikipedia.org/wiki/4X], written in Java.
+Galaxy Artifacts is an opensource and freeware [4x game](http://en.wikipedia.org/wiki/4X]), written in Java.
 
 ## Status
 
@@ -33,10 +30,10 @@ Galaxy Artifacts will be developed in "sprints" with following rules:
 
 
 ## Credits
-* [Slick2d][http://slick2d.org/]
-* [MarteEngine][https://github.com/Gornova/MarteEngine/]
-* [Java Delauney Triangulation][https://github.com/hugebdu/jdt-refactored], modified to remove external dependencies
-* [FreeOrion][http://www.freeorion.org] for graphic
+* [Slick2d](http://slick2d.org/)
+* [MarteEngine](https://github.com/Gornova/MarteEngine/)
+* [Java Delauney Triangulation](https://github.com/hugebdu/jdt-refactored), modified to remove external dependencies
+* [FreeOrion](http://www.freeorion.org) for graphics
 
 ## License
 

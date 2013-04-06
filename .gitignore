@@ -1,0 +1,10 @@
+#################
+## Eclipse
+#################
+
+.project
+.metadata
+bin/
+*.tmp
+*.bak
+*.class

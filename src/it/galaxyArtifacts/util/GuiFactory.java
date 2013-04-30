@@ -1,6 +1,11 @@
 package it.galaxyArtifacts.util;
 
+import it.galaxyArtifacts.core.EntityManager;
 import it.galaxyArtifacts.gui.GuiManager;
+import it.galaxyArtifacts.model.Planet;
+import it.galaxyArtifacts.model.Star;
+import de.matthiasmann.twl.BoxLayout;
+import de.matthiasmann.twl.BoxLayout.Direction;
 import de.matthiasmann.twl.Button;
 import de.matthiasmann.twl.DialogLayout;
 import de.matthiasmann.twl.DialogLayout.Group;
@@ -12,8 +17,8 @@ public class GuiFactory {
 	private GuiFactory() {
 	}
 
-	public static GuiManager buildEmpty() {
-		GuiManager g = new GuiManager();
+	public static GuiManager buildEmpty(EntityManager em) {
+		GuiManager g = new GuiManager(em);
 		return g;
 	}
 
@@ -54,6 +59,64 @@ public class GuiFactory {
 			}
 		});
 		return button;
+	}
+
+	public static Widget createPlanetInfoExample() {
+		DialogLayout grid = new DialogLayout();
+		grid.setTheme("");
+
+		Label label = new Label();
+		label.setText("Type");
+
+		Label label2 = new Label();
+		label2.setText("Planet1");
+
+		Label label3 = new Label();
+		label3.setText("Yellow");
+
+		Label label4 = new Label();
+		label4.setText("terran");
+
+		BoxLayout l = new BoxLayout(Direction.VERTICAL);
+		l.add(label);
+		l.add(label2);
+		l.add(label3);
+		l.add(label4);
+
+		return l;
+	}
+
+	public static Widget createPlanetInfo(Star star) {
+		DialogLayout grid = new DialogLayout();
+		grid.setTheme("");
+
+		BoxLayout l = new BoxLayout(Direction.VERTICAL);
+
+		Label label = new Label();
+		label.setText("Type " + star.type);
+		l.add(label);
+
+		for (Planet p : star.planets) {
+			Label pl = new Label();
+			pl.setText(p.name);
+			l.add(pl);
+		}
+
+		// Label label2 = new Label();
+		// label2.setText("Planet1");
+		//
+		// Label label3 = new Label();
+		// label3.setText("Yellow");
+		//
+		// Label label4 = new Label();
+		// label4.setText("terran");
+		//
+		// l.add(label);
+		// l.add(label2);
+		// l.add(label3);
+		// l.add(label4);
+
+		return l;
 	}
 
 }

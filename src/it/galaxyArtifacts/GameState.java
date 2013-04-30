@@ -24,7 +24,7 @@ public class GameState extends BasicTWLGameState {
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
 		manager = EntityManagerFactory.buildGalaxyTest();
-		gui = GuiFactory.buildEmpty();
+		gui = GuiFactory.buildEmpty(manager);
 		// TODO: problem with twl pipeline?
 		// container
 		// .setMouseCursor(new Image("res/gui/leftarrownormal.png"), 0, 0);
@@ -51,6 +51,7 @@ public class GameState extends BasicTWLGameState {
 	public void update(GameContainer container, StateBasedGame game, int delta)
 			throws SlickException {
 		// manager.update(container);
+		gui.update(container);
 	}
 
 	@Override

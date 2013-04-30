@@ -12,7 +12,6 @@ import org.newdawn.slick.Input;
 
 import de.matthiasmann.twl.Widget;
 
-//TODO: remove use, factory?
 public class GuiManager implements Updatable {
 
 	private Widget statusBar;

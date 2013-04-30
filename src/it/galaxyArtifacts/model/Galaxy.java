@@ -5,6 +5,7 @@ import it.galaxyArtifacts.generate.StarGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Galaxy {
 
@@ -24,6 +25,11 @@ public class Galaxy {
 		stars.clear();
 		stars.addAll(sg.stars);
 		return this;
+	}
+
+	public Star getRandomStar() {
+		Random rnd = new Random();
+		return stars.get(rnd.nextInt(stars.size()));
 	}
 
 }

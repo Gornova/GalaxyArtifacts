@@ -27,7 +27,7 @@ public class GameState extends BasicTWLGameState {
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
 		manager = EntityManagerFactory.buildGalaxyTest();
-		com = new CommandManager();
+		com = new CommandManager(manager.galaxy);
 		gui = GuiFactory.buildEmpty(manager, com);
 		// TODO: problem with twl pipeline?
 		// container

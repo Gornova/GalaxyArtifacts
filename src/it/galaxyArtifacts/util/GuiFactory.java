@@ -2,7 +2,6 @@ package it.galaxyArtifacts.util;
 
 import it.galaxyArtifacts.GameState;
 import it.galaxyArtifacts.command.CommandManager;
-import it.galaxyArtifacts.command.DummyCommand;
 import it.galaxyArtifacts.core.EntityManager;
 import it.galaxyArtifacts.gui.GuiManager;
 import it.galaxyArtifacts.model.Planet;
@@ -108,14 +107,14 @@ public class GuiFactory {
 		}
 
 		// TODO test for dummy command
-		Button db = new Button("Dummy Test");
-		db.addCallback(new Runnable() {
-			@Override
-			public void run() {
-				cm.add(new DummyCommand());
-			}
-		});
-		l.add(db);
+		// Button db = new Button("Dummy Test");
+		// db.addCallback(new Runnable() {
+		// @Override
+		// public void run() {
+		// cm.add(new DummyCommand());
+		// }
+		// });
+		// l.add(db);
 
 		return l;
 	}

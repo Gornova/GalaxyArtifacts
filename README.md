@@ -4,7 +4,7 @@ Galaxy Artifacts is an opensource and freeware [4x game](http://en.wikipedia.org
 
 ## Status
 
-* Sprint 1 completed, see [retrospective](https://github.com/Gornova/GalaxyArtifacts/wiki/sprint-1)
+* Sprint 2 completed, see [retrospective](https://github.com/Gornova/GalaxyArtifacts/wiki/sprint-2)
 
 ## Vision
 

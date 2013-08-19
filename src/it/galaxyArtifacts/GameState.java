@@ -1,5 +1,6 @@
 package it.galaxyArtifacts;
 
+import it.galaxyArtifacts.command.CommandManager;
 import it.galaxyArtifacts.core.EntityManager;
 import it.galaxyArtifacts.gui.GuiManager;
 import it.galaxyArtifacts.gui.twl.BasicTWLGameState;
@@ -19,12 +20,15 @@ public class GameState extends BasicTWLGameState {
 
 	public EntityManager manager;
 	public GuiManager gui;
+	public CommandManager com;
+	public static int turn = 1;
 
 	@Override
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
 		manager = EntityManagerFactory.buildGalaxyTest();
-		gui = GuiFactory.buildEmpty(manager);
+		com = new CommandManager(manager.galaxy);
+		gui = GuiFactory.buildEmpty(manager, com);
 		// TODO: problem with twl pipeline?
 		// container
 		// .setMouseCursor(new Image("res/gui/leftarrownormal.png"), 0, 0);

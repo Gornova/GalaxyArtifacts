@@ -1,5 +1,6 @@
 package it.galaxyArtifacts.gui;
 
+import it.galaxyArtifacts.command.CommandManager;
 import it.galaxyArtifacts.core.Entity;
 import it.galaxyArtifacts.core.EntityManager;
 import it.galaxyArtifacts.core.interfaces.Updatable;
@@ -20,9 +21,11 @@ public class GuiManager implements Updatable {
 
 	private EntityManager em;
 	private RootPane rp;
+	private CommandManager com;
 
-	public GuiManager(EntityManager em) {
+	public GuiManager(EntityManager em, CommandManager com) {
 		this.em = em;
+		this.com = com;
 	}
 
 	public void layoutRootPane() {
@@ -33,7 +36,7 @@ public class GuiManager implements Updatable {
 	public RootPane createRootPane(RootPane rp) {
 		this.rp = rp;
 		rp.setTheme("");
-		statusBar = GuiFactory.createTurnBar();
+		statusBar = GuiFactory.createTurnBar(com);
 		rp.add(statusBar);
 		return rp;
 	}
@@ -48,7 +51,8 @@ public class GuiManager implements Updatable {
 			int my = input.getAbsoluteMouseY() / Entity.TILE_SIZE;
 			selectedStar = em.findStarEntity(mx, my);
 			if (selectedStar != null && planetInfo == null) {
-				planetInfo = GuiFactory.createPlanetInfo(selectedStar.star);
+				planetInfo = GuiFactory
+						.createPlanetInfo(selectedStar.star, com);
 				rp.add(planetInfo);
 				planetInfo.setPosition(selectedStar.cx, selectedStar.cy);
 				planetInfo.adjustSize();

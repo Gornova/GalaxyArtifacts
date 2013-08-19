@@ -25,7 +25,7 @@ public class Main extends TWLStateBasedGame {
 	}
 
 	public static void main(String[] args) throws SlickException {
-		Main game = new Main("Galaxy Artifacts - Sprint 2");
+		Main game = new Main("Galaxy Artifacts - Sprint 3");
 		AppGameContainer container = new AppGameContainer(game);
 		container.setDisplayMode(1024, 768, false);
 		container.setAlwaysRender(true);

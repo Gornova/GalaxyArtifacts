@@ -4,7 +4,7 @@ Galaxy Artifacts is an opensource and freeware [4x game](http://en.wikipedia.org
 
 ## Status
 
-* Sprint 2 completed, see [retrospective](https://github.com/Gornova/GalaxyArtifacts/wiki/sprint-2)
+* Sprint 3 completed, see [retrospective](https://github.com/Gornova/GalaxyArtifacts/wiki/sprint-3)
 
 ## Vision
 
@@ -34,6 +34,7 @@ Galaxy Artifacts will be developed in "sprints" with following rules:
 * [MarteEngine](https://github.com/Gornova/MarteEngine/)
 * [Java Delauney Triangulation](https://github.com/hugebdu/jdt-refactored), modified to remove external dependencies
 * [FreeOrion](http://www.freeorion.org) for graphics
+* {TWL})(http://l33tlabs.org/) for user interface library
 
 ## License
 

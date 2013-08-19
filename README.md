@@ -34,7 +34,7 @@ Galaxy Artifacts will be developed in "sprints" with following rules:
 * [MarteEngine](https://github.com/Gornova/MarteEngine/)
 * [Java Delauney Triangulation](https://github.com/hugebdu/jdt-refactored), modified to remove external dependencies
 * [FreeOrion](http://www.freeorion.org) for graphics
-* {TWL})(http://l33tlabs.org/) for user interface library
+* [TWL](http://l33tlabs.org/) for user interface library
 
 ## License
 
